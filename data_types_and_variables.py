@@ -49,7 +49,7 @@ password = 'notastrongpassword'
 password_length = (len(password) >= 5)
 username_length = (len(username) <= 20)
 pass_is_not_user = (password != username)
-no_whitespace = ((username,password).count(' ') == 0)
+no_whitespace = ((username, password).count(' ') == 0)
 
 
 print(f"\nNumber 5\nThe password is {password_length} characters.\nThe username is {username_length} characters.")
