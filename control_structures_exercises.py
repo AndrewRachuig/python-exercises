@@ -223,15 +223,75 @@ while True:
 # 6. Create a list of dictionaries where each dictionary represents a book that you have read.
 print("Question 6: Book dictionaries")
 # Each dictionary in the list should have the keys title, author, and genre. Loop through the list and print out information about each book.
-book_dict = dict(
+
+book_dict = [
+    {
+        "title": "Foundation",
+        "author": "Isaac Asimov",
+        "genre": "Science Fiction"
+    },
+
+    {
+        "title": "Lord of the Rings",
+        "author": "J.R.R Tolkien",
+        "genre": "Fantasy"
+    },
+
+    {
+        "title": "Hyperion",
+        "author": "Dan Simmons",
+        "genre": "Science Fiction"
+    },
+
+    {
+        "title": "The Player of Games",
+        "author": "Isaac Asimov",
+        "genre": "Iain M. Banks"
+    },
+
+    {
+        "title": "The Girl with the Dragon Tattoo",
+        "author": "Stieg Larsson",
+        "genre": "Mystery"
+    },
+
+    {
+        "title": "Ender's Game",
+        "author": "Orson Scott Card",
+        "genre": "Science Fiction"
+    }
+]
+
+count = 1
+for book in book_dict:
+    print(f"\nBook #{count}")
+    for key in book:
+        print(book[key])
+    count += 1
+
+
+#   a. Prompt the user to enter a genre, then loop through your books list and print out the titles of all the books in that genre.
+genre_choice = input("\nPLease enter a genre (Science Fiction, Fantasy, Mystery): ").lower()
+print(f"\nThe following books are from the genre {genre_choice.title()}:")
+
+for book in book_dict:
+    if book["genre"].lower() == genre_choice:
+        print(book["title"])
+
+
+
+
+# 6. Alternate solutionThe following is the same as requested above but using a single dictionary of lists rather than a list of dictionaries.
+book_dict_2 = dict(
     title=["Foundation", "Lord of the Rings", "Hyperion", "The Player of Games", "The Girl With the Dragon Tattoo",
            "Ender's Game"],
     author=["Isaac Asimov", "J.R.R. Tolkien", "Dan Simmons", "Iain M. Banks", "Stieg Larsson", "Orson Scott Card", ],
     genre=["Science Fiction", "Fantasy", "Science Fiction", "Science Fiction", "Mystery", "Science Fiction"])
 
 
-for i in range(len(book_dict['title'])):
+for i in range(len(book_dict_2['title'])):
     print(f"\nBook #{i + 1}")
     for key in book_dict:
-        print(book_dict[key][i])
-# Prompt the user to enter a genre, then loop through your books list and print out the titles of all the books in that genre.
+        print(book_dict_2[key][i])
+
+
