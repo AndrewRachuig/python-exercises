@@ -1,15 +1,15 @@
 #1.Conditional Basics
 #
 # a. prompt the user for a day of the week, print out whether the day is Monday or not
-print("1. Conditional Basics: part a")
+print("\n1. Conditional Basics: part a")
 if input("What day is today? ").lower() == 'monday':
-    print("Today is monday.")
+    print("Today is Monday.")
 else:
-    print("Today is not monday.")
+    print("Today is not Monday.")
 
 
 # b. prompt the user for a day of the week, print out whether the day is a weekday or a weekend
-print("Conditional Basics: part b")
+print("\nConditional Basics: part b")
 if input("What day is today? ").lower() in ['saturday', 'sunday']:
     print("Today is a weekend day.")
 else:
@@ -17,7 +17,7 @@ else:
 
 # c. create variables and make up values for
 #   the number of hours worked in one week
-print("Conditional Basics: part c")
+print("\nConditional Basics: part c")
 hours_worked = 45
 #   the hourly rate
 hourly_rate =  20
@@ -31,7 +31,7 @@ else:
 print("The paycheck is", paycheck)
 
 # 2. Loop Basics
-print("Loop Basics: part a, less than 15 loop")
+print("\nLoop Basics: part a, less than 15 loop")
 #   a.While
 #   Create an integer variable i with a value of 5.
 i = 5
@@ -42,48 +42,48 @@ while i <= 15:
     i += 1
 
     # Create a while loop that will count by 2's starting with 0 and ending at 100. Follow each number with a new line.
-print("Loop Basics: part a, count by 2's loop")
+print("\nLoop Basics: part a, count by 2's loop")
 new_var = 0
 while new_var < 100:
     new_var += 2
-    print(new_var, '\n')
+    print(new_var)
 
     # Alter your loop to count backwards by 5's from 100 to -10.
-print("Loop Basics: part a, countdown by 5's loop")
+print("\nLoop Basics: part a, countdown by 5's loop")
 while new_var >= -10:
-    print(new_var, '\n')
+    print(new_var)
     new_var -= 5
 
     # Create a while loop that starts at 2, and displays the number squared on each line while the number is less than 1,000,000. Output should equal:
-print("Loop Basics: part a, square to 1 million")
+print("\nLoop Basics: part a, square to 1 million")
 square_var = 2
 while square_var < 1000000:
     print(square_var)
     square_var **= 2
 
     # Write a loop that uses print to create the output shown below.
-print("Loop Basics: part a, countdown from 100 by 5's loop again")
+print("\nLoop Basics: part a, countdown from 100 by 5's loop again")
 var_hundred = 100
 while var_hundred > 0:
     print(var_hundred)
     var_hundred -= 5
 
     # b. For Loops
-print("Loop Basics: part b, multiplication table")
+print("\nLoop Basics: part b, multiplication table")
         # i.Write some code that prompts the user for a number, then shows a multiplication table up through 10 for that number.
-number_choice = input("Please input a number: ")
+number_choice = int(input("Please input a number: "))
 
 for n in range(1, 11):
-    print(f"{n} * {number_choice} = {n * number_choice}")
+    print(f"{number_choice} * {n} = ", n * number_choice)
     # For example, if the user enters 7, your program should output:
 
         # ii. Create a for loop that uses print to create the output shown below.
-print("Loop Basics: part b, number * itself length loop")
+print("\nLoop Basics: part b, number * itself length loop")
 for n in range(1, 10):
     print(f'{n}' * n)
 
     # c.break and continue
-print("Loop Basics: part c")
+print("\nLoop Basics: part c")
 # Prompt the user for an odd number between 1 and 50. Use a loop and a break statement to continue prompting the user if they enter invalid input. (Hint: use the isdigit method on strings to determine this).
 # Use a loop and the continue statement to output all the odd numbers between 1 and 50, except for the number the user entered.
 
@@ -105,10 +105,10 @@ while index < 50:
     index += 2
 
     # d. Prompt the user to enter a positive number and write a loop that counts from 0 to that number.
-print("Loop Basics: part d")
+print("\nLoop Basics: part d")
 while True:
     try:
-        pos_choice = int(input("Please input a positive number"))
+        pos_choice = int(input("Please input a positive number: "))
         if pos_choice > 0:
             break
         else:
@@ -121,10 +121,10 @@ while count_index <= pos_choice:
     count_index += 1
 
     # e. Write a program that prompts the user for a positive integer. Next write a loop that prints out the numbers from the number the user entered down to 1.
-print("Loop Basics: part e")
+print("\nLoop Basics: part e")
 while True:
     try:
-        pos_choice = int(input("Please input a positive number"))
+        pos_choice = int(input("Please input a positive number: "))
         if pos_choice > 0:
             break
         else:
@@ -136,7 +136,7 @@ while pos_choice > 0:
     pos_choice -= 1
 
 # 3. Fizzbuzz
-print("Question 3: Fizzbuzz")
+print("\nQuestion 3: Fizzbuzz")
     # Write a program that prints the numbers from 1 to 100.
     # For multiples of three print "Fizz" instead of the number
     # For the multiples of five print "Buzz".
@@ -153,7 +153,7 @@ for number in range(1, 101):
         print(number)
 
 # 4. Display a table of powers.
-print("Question 4: Table of powers")
+print("\nQuestion 4: Table of powers")
     # Prompt the user to enter an integer.
     # Display a table of squares and cubes from 1 to the value entered.
     # Ask if the user wants to continue.
@@ -177,7 +177,7 @@ while index <= user_int:
 
 
 # 5.Convert given number grades into letter grades.
-print("Question 5: Converting number grades")
+print("\nQuestion 5: Converting number grades")
     # Prompt the user for a numerical grade from 0 to 100.
     # Display the corresponding letter grade.
     # Prompt the user to continue.
@@ -218,10 +218,11 @@ while True:
 
     if input("Would you like to continue? yes or no? ").lower() == 'yes':
         break
-
+    else:
+        break
 
 # 6. Create a list of dictionaries where each dictionary represents a book that you have read.
-print("Question 6: Book dictionaries")
+print("\nQuestion 6: Book dictionaries")
 # Each dictionary in the list should have the keys title, author, and genre. Loop through the list and print out information about each book.
 
 book_dict = [
@@ -282,16 +283,16 @@ for book in book_dict:
 
 
 # 6. Alternate solutionThe following is the same as requested above but using a single dictionary of lists rather than a list of dictionaries.
-book_dict_2 = dict(
-    title=["Foundation", "Lord of the Rings", "Hyperion", "The Player of Games", "The Girl With the Dragon Tattoo",
-           "Ender's Game"],
-    author=["Isaac Asimov", "J.R.R. Tolkien", "Dan Simmons", "Iain M. Banks", "Stieg Larsson", "Orson Scott Card", ],
-    genre=["Science Fiction", "Fantasy", "Science Fiction", "Science Fiction", "Mystery", "Science Fiction"])
+# book_dict_2 = dict(
+#     title=["Foundation", "Lord of the Rings", "Hyperion", "The Player of Games", "The Girl With the Dragon Tattoo",
+#            "Ender's Game"],
+#     author=["Isaac Asimov", "J.R.R. Tolkien", "Dan Simmons", "Iain M. Banks", "Stieg Larsson", "Orson Scott Card", ],
+#     genre=["Science Fiction", "Fantasy", "Science Fiction", "Science Fiction", "Mystery", "Science Fiction"])
 
 
-for i in range(len(book_dict_2['title'])):
-    print(f"\nBook #{i + 1}")
-    for key in book_dict:
-        print(book_dict_2[key][i])
-
+# for i in range(len(book_dict_2['title'])):
+#     print(f"\nBook #{i + 1}")
+#     book_list2 = book_dict_2.keys()
+#     for key in book_list2:
+#         print(book_dict_2[key][i])
 
