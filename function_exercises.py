@@ -176,7 +176,7 @@ print(twelveto24('11:35pm'))
 
 # Bonus write a function that does the opposite.
 def twentyfourto12(timein):
-    time_out = float(timein.replace(':','.'))
+    time_out = float(timein.replace(':', '.'))
     if time_out < 13:
         time_out = str(time_out).replace('.', ':')
         if re.search(':[0-9]$', time_out):
